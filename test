@@ -1,0 +1,30 @@
+__author__ = 'Agnieszka'
+#!/usr/bin/python
+ # -*- coding: utf-8 -*-
+
+rr = ['12,34', '12,34', '12,34', '21,43', '12,34', '12,34', '12,34', '11123112,34']
+
+rr_dots = []
+for r in rr:
+    r = r.replace(',', '.')
+    rr_dots.append(r)
+
+rr_dots = map(float,rr_dots)
+
+result = sum(rr_dots)
+print result
+
+# method 1 - dont work
+# def replace_all(r, ',', '.'):
+#     for i, elem in with_index(seq):
+#         if elem == obj:
+#             seq[i] = replacement
+# method 2 - dont work
+# for r in rr:
+#         for char in r:
+#             if char == ',':
+#                 char = '.'
+# rr_dots = []
+# rr_dots.append(r)
+#
+# print rr
